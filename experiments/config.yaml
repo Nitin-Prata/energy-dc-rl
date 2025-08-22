@@ -1,0 +1,17 @@
+# Default experiment configuration for RL data center project
+seed: 0
+episodes: 300
+max_steps_per_ep: 200
+n_envs: 4
+agent:
+  type: HybridDQNAgent
+  lr: 0.0001
+  gamma: 0.99
+  batch_size: 64
+  buffer_capacity: 200000
+  dueling: true
+  planning_horizon: 3
+environment:
+  dynamic_pricing_range: [0.08, 0.20]
+  renewable_share_range: [0.1, 0.7]
+  carbon_intensity_range: [0.2, 0.7]
